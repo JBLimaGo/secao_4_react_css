@@ -2,6 +2,8 @@ import "./App.css";
 import MyComponent from "./components/MyComponent";
 
 function App() {
+  const n = 15;
+  const name = "Jeff";
   return (
     <div className="App">
       {/* CSS Global */}
@@ -16,6 +18,23 @@ function App() {
       <p style={{ color: "blue", padding: "25px", borderTop: "2px solid red" }}>
         Este Elemento foi estilazado de forma inline
       </p>
+
+      {/* CSS Inline Dinânmico - Pode ser usado o if Ternario com isso pode ser implementado varios estilos no CSS */}
+      <h2 style={n < 10 ? { color: "black" } : { color: "pink" }}>
+        CSS Dinâmico
+      </h2>
+
+      <h2 style={n > 10 ? { color: "purple" } : { color: "pink" }}>
+        CSS Dinâmico
+      </h2>
+
+      <h2
+        style={
+          name === "Jeff" ? { color: "green", backgroundColor: "#000" } : null
+        }
+      >
+        Teste Nome
+      </h2>
     </div>
   );
 }
