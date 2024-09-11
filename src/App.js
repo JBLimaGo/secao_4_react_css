@@ -46,7 +46,7 @@ function App() {
         Este título vai ter classe dinâmica
       </h2>
 
-      {/* CSS Modules */}
+      {/* CSS Modules - Modularizando o CSS  */}
       <Title />
     </div>
   );
