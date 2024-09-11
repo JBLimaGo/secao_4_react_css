@@ -4,6 +4,10 @@ import MyComponent from "./components/MyComponent";
 function App() {
   const n = 15;
   const name = "Jeff";
+  const redTitle = true;
+
+  //const redTitle = false;
+
   return (
     <div className="App">
       {/* CSS Global */}
@@ -34,6 +38,11 @@ function App() {
         }
       >
         Teste Nome
+      </h2>
+      {/* Classe Dinâmica - Efeito de clase dinaminca com if ternario */}
+
+      <h2 className={redTitle ? "red-title" : "title"}>
+        Este título vai ter classe dinâmica
       </h2>
     </div>
   );
